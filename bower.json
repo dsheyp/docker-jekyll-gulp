@@ -2,13 +2,13 @@
   "name": "docker-jekyll-gulp",
   "version": "0.0.0",
   "authors": [
-    "CCG <devops@ccg.murdoch.edu.au"
+    "dsheyp"
   ],
   "description": "static site generation",
   "main": "",
   "moduleType": [],
   "license": "GPL3",
-  "homepage": "https://github.com/muccg/docker-jekyll-gulp/",
+  "homepage": "https://github.com/dsheyp/docker-jekyll-gulp/",
   "private": true,
   "ignore": [
     "**/.*",

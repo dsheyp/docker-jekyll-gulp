@@ -1,5 +1,5 @@
 FROM buildpack-deps:jessie-curl
-MAINTAINER https://github.com/muccg/
+MAINTAINER https://github.com/dsheyp/
 
 ARG ARG_GIT_TAG=next_release
 

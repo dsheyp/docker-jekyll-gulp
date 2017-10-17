@@ -9,7 +9,7 @@ DATE=`date +%Y.%m.%d`
 
 : ${DOCKER_BUILD_PROXY:="--build-arg http_proxy"}
 : ${DOCKER_USE_HUB:="0"}
-: ${DOCKER_IMAGE:="muccg/${PROJECT_NAME}"}
+: ${DOCKER_IMAGE:="dsheyp/${PROJECT_NAME}"}
 : ${SET_HTTP_PROXY:="1"}
 : ${SET_PIP_PROXY:="1"}
 : ${DOCKER_NO_CACHE:="0"}
@@ -139,7 +139,7 @@ ci_docker_login() {
     info 'Docker login'
 
     if [ -z ${DOCKER_USERNAME+x} ]; then
-        DOCKER_USERNAME=${bamboo_DOCKER_USERNAME}
+         DOCKER_USERNAME='dsheyp'
     fi
     if [ -z ${DOCKER_PASSWORD+x} ]; then
         DOCKER_PASSWORD=${bamboo_DOCKER_PASSWORD}
@@ -195,7 +195,7 @@ create_image() {
     docker tag ${DOCKER_IMAGE}:latest ${DOCKER_IMAGE}:${GIT_TAG}
     docker tag ${DOCKER_IMAGE}:latest ${DOCKER_IMAGE}:${GIT_TAG}-${DATE}
     set +x
-    success "$(docker images | grep muccg/${PROJECT_NAME} | sed 's/  */ /g')"
+    success "$(docker images | grep dsheyp/${PROJECT_NAME} | sed 's/  */ /g')"
 }
 
  
